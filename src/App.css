@@ -1,0 +1,31 @@
+/** COMMON CSS STARTS HERE */
+:root{
+    --primaryColor: #ff9b00;
+    --secondaryColor: #222;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none !important;
+}
+h1,h2,h3,h4,h5,h6,ul,p,span,ol{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "arial";
+}
+.btn-primary{
+    background-color: var(--primaryColor) !important;
+    color: white;
+    border: none !important;
+    
+}
+
+/** COMMON CSS ENDS HERE */
