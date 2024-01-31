@@ -7,8 +7,9 @@ import "swiper/css/pagination";
 import { NavLink } from "react-router-dom";
 import { EffectFade, Autoplay } from "swiper/modules";
 import { getApiData } from "../helpers/getApiData";
+import Loader from "../components/utils/Loader";
 
-const HeroBanner = ({numOfSlides = 1}) => {
+const HeroBanner = ({ numOfSlides = 1 }) => {
   //* GET BANNERS FROM API
   const [Banners, setBanners] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,9 +27,7 @@ const HeroBanner = ({numOfSlides = 1}) => {
       }`}
     >
       {isLoaded != true ? (
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+        <Loader />
       ) : (
         <Swiper
           modules={[EffectFade, Autoplay]}
@@ -109,11 +108,10 @@ const HeroBannerWrapper = styled.section`
     border-radius: 0;
     margin: 0;
     max-width: 100%;
-     .swiper-slide{
-        border-radius: 0;
-     }
+    .swiper-slide {
+      border-radius: 0;
+    }
   }
 `;
-
 
 export default HeroBanner;
