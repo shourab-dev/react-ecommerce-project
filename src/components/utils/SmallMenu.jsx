@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+
 const SmallMenu = ({ targetId }) => {
+  const authUserToken = useSelector((state) => state.auth.token);
+  const authUser = useSelector((state) => state.auth.user);
   return (
     <div
       className="offcanvas offcanvas-start d-lg-none"
@@ -41,12 +45,21 @@ const SmallMenu = ({ targetId }) => {
               Contact
             </NavLink>
           </li>
+          <li>
+            {authUserToken ? (
+              <NavLink className="nav-link authUserLink" to="/login">
+                {authUser.email} (Logout)
+              </NavLink>
+            ) : (
+              <NavLink className="nav-link" to="/login">
+                Login
+              </NavLink>
+            )}
+          </li>
         </ul>
       </div>
     </div>
   );
 };
-
-
 
 export default SmallMenu;

@@ -67,7 +67,7 @@ const MyHeader = styled.header`
     top: 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     left: 0;
-    z-index:999999;
+    z-index: 999999;
     animation: ${menuFixedAnimation} 0.3s linear forwards;
   }
 
@@ -83,6 +83,10 @@ const MyHeader = styled.header`
     border-radius: 2px;
   }
 
+  .menu ul li a.authUserLink {
+    font-size: 12px;
+    padding: 5px !important;
+  }
   .menuToggler {
     width: 50px;
     height: 50px;

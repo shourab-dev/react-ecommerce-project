@@ -27,5 +27,7 @@ body{
     border: none !important;
     
 }
-
+.text-primary{
+    color: var(--primaryColor) !important;
+}
 /** COMMON CSS ENDS HERE */

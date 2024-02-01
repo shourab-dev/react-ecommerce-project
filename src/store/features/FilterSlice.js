@@ -17,18 +17,6 @@ const FilterSlice = createSlice({
     filerProducts: (state, actions) => {
       const { price ,rating} = actions.payload;
       
-      // const result = state.products.filter((product) => {
-      //   let newProducts = null;
-      //   if (product.price <= price) {
-      //       newProducts = product
-      //     }
-      //     if (Math.round(product.rating.rate) === rating) {
-      //       newProducts = {product};
-            
-      //     }
-      //     return newProducts;
-      //   });
-
 
       //* NEW APPROCH
       let newProducts = {};
